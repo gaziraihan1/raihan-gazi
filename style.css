@@ -638,9 +638,9 @@ footer div:last-child p{
     }
     body{
         width: 95vw;
+        margin: 0 auto;
     }
     header{
-        width: 95vw;
         height: auto;
         overflow: visible;
         position: relative;
@@ -692,9 +692,10 @@ footer div:last-child p{
         position: absolute;
         height: auto;
         top: 60px;
+        left: 0;
         background:var(--background-main);
         z-index: 1;
-        width: 100vw;
+        width: 100%;
         height: 200px;
     }
     
@@ -726,16 +727,20 @@ footer div:last-child p{
         height: 14px; 
         transition: opacity 0.3s;
     }
-    
+    main{
+        margin: 0 auto;
+    }
     .main{
         display: flex;
         flex-direction: column;
         width: 90vw;
+        margin: 0 auto;
     }
     .main-div{
         display: flex;
         flex-direction: column;
         width: 90vw;
+        margin: 0 auto;
         justify-content: space-around;
         flex-wrap: wrap;
         background: none;
@@ -744,11 +749,12 @@ footer div:last-child p{
         margin-right: auto; */
     }
     .div-under-div-1 a{
-        font-size: 12px;
-        padding: 8px 28px;
+        font-size: 8px;
         text-align: center;
+        text-align: center;
+        padding: 8px 28px;
         color:var(--button-tag-color);
-        margin-left: 6px;
+        margin-left: 4px;
     }
     
     .main-div-1{
@@ -771,11 +777,11 @@ footer div:last-child p{
         margin: 0 auto;
     }
     .main-div-2 img{
-        height: 330px;
-        width: 290px;
+        width: 100%;
+        height: auto;
         border-radius: 0px 0px 200px 200px;
-        margin: 0px;
-       transform: translateX(35%);
+        margin: 0 auto;
+        align-self: center;
     }
     .main-div, .about-us, .skill, .projects{
         width: 90vw;
@@ -857,11 +863,22 @@ footer div:last-child p{
         opacity: 1;
     }
     footer{
+        width: 95vw;
         flex-direction: column;
         text-align: center;
         justify-content: space-between;
     }
+    .footer-copyright a{
+        font-size: 16px;
+    }
     footer div{
         margin-top: 2em;
     }
+    .footer-links a, footer div:last-child a{
+        font-size: 13px;
+    }
+    footer div:last-child p{
+        font-size: 15px;
+    }
+    
 }
