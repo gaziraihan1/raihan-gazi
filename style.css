@@ -15,7 +15,7 @@ body.light-mode {
     --footer-background: rgb(189, 189, 189);
     --footer-color: rgb(105, 98, 85);
     --responsive-about: rgb(212, 211, 211);
-    --svg-color: rgb(27, 27, 27);
+    --skill-text: rgb(27, 27, 27);
 }
 
 body.dark-mode {
@@ -28,7 +28,7 @@ body.dark-mode {
     --footer-color: rgb(221, 215, 205);
     --footer-paragraph:rgb(177, 176, 176);
     --responsive-about:rgb(51, 51, 51);
-    --svg-color: rgb(231, 231, 231);
+    --skill-text: rgb(255, 255, 255);
 }
 /* Some css that will apply for all same element for reduce code*/
 h1{
@@ -366,7 +366,8 @@ table,th, td{
     font-size: 12px;
     padding-left: 6px;
     font-family: "Edu AU VIC WA NT Hand", cursive;
-    letter-spacing: 1px
+    letter-spacing: 1px;
+    color: var(--skill-text);
 }
 .front-end, .other-skill{
     list-style-type: none;
@@ -656,7 +657,7 @@ footer div:last-child p{
     }
     nav div label{
         width: 40px;
-        height: 12px;
+        height: 16px;
         border-radius: 6px;
     }
     nav div label::after{
@@ -664,8 +665,8 @@ footer div:last-child p{
         position: absolute;
         top:2px;
         left:2px;
-        height: 8px;
-        width: 8px;
+        height: 12px;
+        width: 12px;
     }
     
     nav div input:checked + label::after{
@@ -674,6 +675,7 @@ footer div:last-child p{
         background: #1b1a1a;
     }
     nav div p{
+        padding-top: 14px;
         font-size: 18px;
     }
     nav ul li a{
@@ -738,7 +740,7 @@ footer div:last-child p{
     }
     .main-div{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 90vw;
         margin: 0 auto;
         justify-content: space-around;
@@ -748,15 +750,15 @@ footer div:last-child p{
         /* margin-left:auto;
         margin-right: auto; */
     }
-    .div-under-div-1 a{
-        font-size: 8px;
-        text-align: center;
-        text-align: center;
-        padding: 8px 28px;
-        color:var(--button-tag-color);
-        margin-left: 4px;
+    .div-under-div-1{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 25%
     }
-    
+    .div-under-div-1 a{
+        text-align: center;
+    }
     .main-div-1{
         flex-basis: 100%;
         width: 100%;
@@ -878,7 +880,7 @@ footer div:last-child p{
         font-size: 13px;
     }
     footer div:last-child p{
-        font-size: 15px;
+        font-size: 14px;
     }
     
 }
