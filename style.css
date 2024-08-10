@@ -624,7 +624,7 @@ footer div:last-child p{
 
 
 
-@media (min-width: 390px) and (max-width: 640px) {
+@media (max-width: 600px) {
     /* div{
         width:100%;
     } */
@@ -637,10 +637,10 @@ footer div:last-child p{
         
     }
     body{
-        width: 100vw;
+        width: 95vw;
     }
     header{
-        width: 100vw;
+        width: 95vw;
         height: auto;
         overflow: visible;
         position: relative;
