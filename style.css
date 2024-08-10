@@ -642,7 +642,7 @@ footer div:last-child p{
         margin: 0 auto;
     }
     header{
-        height: auto;
+        height: 60px;
         overflow: visible;
         position: relative;
     }
@@ -650,10 +650,10 @@ footer div:last-child p{
         display: block;
         margin-top: 10px;
         cursor: pointer;
-        color: var(--svg-color)
     }
     nav{
         width: 100%;
+        
     }
     nav div label{
         width: 40px;
@@ -719,14 +719,14 @@ footer div:last-child p{
    
     #scroll-to-top {
         bottom: 20px;
-        right: 2px;
+        right: 8px;
         display: none;
         cursor: pointer;
     }
     
     #scroll-to-top svg {
-        width: 14px; 
-        height: 14px; 
+        width: 22px; 
+        height: 22px; 
         transition: opacity 0.3s;
     }
     main{
@@ -747,6 +747,7 @@ footer div:last-child p{
         flex-wrap: wrap;
         background: none;
         padding: 10px;
+        gap: 2em;
         /* margin-left:auto;
         margin-right: auto; */
     }
@@ -754,7 +755,7 @@ footer div:last-child p{
         display: flex;
         flex-direction: column;
         gap: 1em;
-        width: 25%
+        width: 25vw
     }
     .div-under-div-1 a{
         text-align: center;
@@ -883,4 +884,9 @@ footer div:last-child p{
         font-size: 14px;
     }
     
+}
+@media (min-width: 601px) and (max-width: 780px) {
+    body{
+        width: 100vw;
+    }
 }
