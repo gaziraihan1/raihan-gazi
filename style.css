@@ -1,6 +1,5 @@
 :root{
     --heading1-tag: rgb(175, 141, 76);
-    --paragraph-tag: rgb(177, 176, 176);
     --button-tag-bg: green;
     --button-tag-color: rgb(206, 203, 203);
 }
@@ -9,13 +8,14 @@ body.light-mode {
     --background-main:rgb(230, 230, 230);
     --text-color: black;
     --heading1-tag: rgb(175, 141, 76);
-    --paragraph-tag: rgb(158, 157, 157);
+    --paragraph-tag: rgb(97, 97, 97);
     --button-tag-bg: green;
     --button-tag-color: rgb(180, 180, 180);
     --footer-background: rgb(189, 189, 189);
     --footer-color: rgb(105, 98, 85);
     --responsive-about: rgb(212, 211, 211);
     --skill-text: rgb(27, 27, 27);
+    --heading-2-tag: rgb(49, 46, 46);
 }
 
 body.dark-mode {
@@ -29,11 +29,13 @@ body.dark-mode {
     --footer-paragraph:rgb(177, 176, 176);
     --responsive-about:rgb(51, 51, 51);
     --skill-text: rgb(255, 255, 255);
+    --heading-2-tag: rgb(228, 222, 222);
 }
 /* Some css that will apply for all same element for reduce code*/
 h1{
     color: var(--heading1-tag);
-    font-family: "Sevillana", cursive;
+    font-family: "Anek Devanagari", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: 2px;
 }
 
@@ -61,7 +63,7 @@ h1{
     font-family: monospace;
     font-size: 20px;
     font-weight: 600;
-    color:#757474
+    color:var(--heading-2-tag)
 }
 
 /* All paragraph tag */
@@ -172,7 +174,8 @@ nav div p{
     text-align: center;
     font-size: xx-large;
     padding: 12px;
-    font-family: "Sevillana", cursive;
+    font-family: "Anek Devanagari", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 900;
     background: linear-gradient(to left, rgb(182, 90, 90) , rgb(98, 98, 189), rgb(85, 161, 85));
     letter-spacing: 4px;
@@ -372,7 +375,7 @@ table,th, td{
     margin-bottom: 1em;
     font-size: 12px;
     padding-left: 6px;
-    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-family: "Ubuntu", sans-serif;
     letter-spacing: 1px;
     color: var(--skill-text);
 }
@@ -630,22 +633,9 @@ footer div:last-child p{
 }
 
 
-
-
-@media (max-width: 640px) {
-    /* div{
-        width:100%;
-    } */
-    p{
-        padding-top: 12px;
-        color: var(--paragraph-tag);
-        word-spacing: 0px;
-        font-size: 14px;
-        line-height: 20px;
-        
-    }
+@media (max-width: 920px) {
     body{
-        margin: 0 auto;
+        width: 100vw;
     }
     header{
         width: 100%;
@@ -662,38 +652,6 @@ footer div:last-child p{
         width: 100%;
         background:var(--background-main);
     }
-    
-    nav div label{
-        width: 40px;
-        height: 16px;
-        border-radius: 6px;
-    }
-    nav div label::after{
-        content: "";
-        position: absolute;
-        top:2px;
-        left:2px;
-        height: 12px;
-        width: 12px;
-    }
-    
-    nav div input:checked + label::after{
-        left: 38px;
-        transform: translateX(-100%);
-        background: #1b1a1a;
-    }
-    nav div p{
-        font-size: 18px;
-    }
-    nav ul li a{
-        text-transform: capitalize;
-        font-size: 14px;
-    }
-    header div:last-child{
-        display: block;
-        margin-right: 0px;
-    }
-    
     nav ul.show-menu{
         display: flex;
         flex-direction: column;
@@ -735,19 +693,10 @@ footer div:last-child p{
         height: 22px; 
         transition: opacity 0.3s;
     }
-    main{
-        margin: 0 auto;
-    }
-    .main{
-        display: flex;
-        flex-direction: column;
-        width: 90vw;
-        margin: 0 auto;
-    }
     .main-div{
         display: flex;
         flex-direction: column-reverse;
-        width: 90vw;
+        width: 95vw;
         margin: 0 auto;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -761,7 +710,7 @@ footer div:last-child p{
         display: flex;
         flex-direction: column;
         gap: 1em;
-        width: 25vw
+        width: 22vw;
     }
     .div-under-div-1 a{
         text-align: center;
@@ -792,6 +741,88 @@ footer div:last-child p{
         margin: 0 auto;
         align-self: center;
     }
+    .about-us-1 p, .about-us-2 p{
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .about-us-2{
+        margin-top: 4em;
+    }
+    .projects-section img{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    
+    p{
+        padding-top: 12px;
+        color: var(--paragraph-tag);
+        word-spacing: 0px;
+        font-size: 14px;
+        line-height: 20px;
+        
+    }   
+    nav div label{
+        width: 40px;
+        height: 16px;
+        border-radius: 6px;
+    }
+    nav div label::after{
+        content: "";
+        position: absolute;
+        top:2px;
+        left:2px;
+        height: 12px;
+        width: 12px;
+    }
+    
+    nav div input:checked + label::after{
+        left: 38px;
+        transform: translateX(-100%);
+        background: #1b1a1a;
+    }
+    nav div p{
+        font-size: 18px;
+    }
+    nav ul li a{
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+    header div:last-child{
+        display: block;
+        margin-right: 0px;
+    }
+    
+    nav ul.show-menu{
+        height: 220px;
+    }
+    
+    
+    nav ul li{
+        padding: 12px;
+        width: 100%;
+    }
+    
+    main{
+        margin: 0 auto;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .main-div{
+        width: 90vw;
+        flex-direction: column-reverse;
+    }
+    .div-under-div-1{
+        width: 25vw
+    }
+    
+    
     .main-div, .about-us, .skill, .projects{
         width: 90vw;
         margin: 6em auto;  
@@ -811,15 +842,9 @@ footer div:last-child p{
         border-radius: 4px;
     }
     .about-us h2{
-        margin-top:6px;
+        margin-top:8px;
     }
-    .about-us-1 p, .about-us-2 p{
-        width: 100%;
-        padding: 20px 30px;
-    }
-    .about-us-2{
-        margin-top: 4em;
-    }
+    
     .about-us h2, .skill h2{
         
         font-size: 18px;
@@ -852,9 +877,7 @@ footer div:last-child p{
     .other-skill-section{
         margin-top: 20px;
     }
-    .projects-section img{
-        display: none;
-    }
+    
     .projects-section {
         flex-direction: column;
     }
@@ -899,53 +922,19 @@ footer div:last-child p{
     body{
         width: 100vw;
     }
-    header{
-        width: 100%;
-        height: 60px;
-        overflow: visible;
-        position: relative;
-    }
-    header svg{
-        display: block;
-        margin-right: 1em;
-        cursor: pointer;
-    }
-    nav{
-        width: 100%;
-        background: var(--background-main);
-        
-    }
+    
     nav div p{
         font-size: 22px;
     }
-    nav ul.show-menu{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
+    nav ul.show-menu{  
         height: 250px;
-        position: absolute;
-        height: auto;
-        top: 60px;
-        left: 0;
-        background:var(--background-main);
-        z-index: 1;
     }
-    nav ul{
-        display: none;
-    }
-     nav ul {
-        display: none;
-        transition: all 0.3s ease-in-out;
-    }
+    
     nav ul li{
         padding: 14px;
-        transition: background 0.3s;
+        width: 100%;
     }
-    nav ul li:hover{
-        background: var(--background-color);
-    }
+    
     
     .main{
         display: flex;
@@ -954,53 +943,25 @@ footer div:last-child p{
         margin: 0 auto;
     }
     .main-div{
-        display: flex;
-        flex-direction: column-reverse;
+        margin-top: 8em;
         width: 95vw;
-        margin: 0 auto;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        background: none;
-        padding: 10px;
-        gap: 2em;
-        /* margin-left:auto;
-        margin-right: auto; */
+        flex-direction: column;
     }
     .div-under-div-1{
-        display: flex;
-        flex-direction: column;
-        gap: 1.5em;
         width: 22vw;
     }
-    .div-under-div-1 a{
-        text-align: center;
-    }
-    .main-div-1{
-        flex-basis: 100%;
-        width: 100%;
-        background: var(--background-main);
-        padding: 30px;
-        border-radius: 4px;
-        margin: 0 0px;
-    }
     
-    .main-div-1 p{
-        width: 100%;
-    }
     .main-div-2{
         height: 90%;
         width: 90%;
-        border-radius: 50%;
-        flex-basis: 100%;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
     .main-div-2 img{
-        width: 100%;
-        height: auto;
-        border-radius: 0px 0px 200px 200px;
-        margin: 0 auto;
-        align-self: center;
+        width: 350px;
+        height: 360px;
     }
+   
     .main-div, .about-us, .skill, .projects{
         width: 95vw;
         margin: 6em auto;  
@@ -1020,15 +981,9 @@ footer div:last-child p{
         border-radius: 4px;
     }
     .about-us h2{
-        margin-top:6px;
+        margin-top:8px;
     }
-    .about-us-1 p, .about-us-2 p{
-        width: 100%;
-        padding: 20px 30px;
-    }
-    .about-us-2{
-        margin-top: 4em;
-    }
+    
     .about-us h2, .skill h2{
         
         font-size: 20px;
@@ -1060,9 +1015,6 @@ footer div:last-child p{
     }
     .other-skill-section{
         margin-top: 22px;
-    }
-    .projects-section img{
-        display: none;
     }
     .projects-section {
         flex-direction: row;
@@ -1105,4 +1057,98 @@ footer div:last-child p{
         font-size: 14px;
     }
 
+}
+@media (min-width:800px) and (max-width: 920px) {
+    nav ul li{
+        width: 100%;
+        padding: 16px;
+        transition: background 0.3s;
+    }
+    nav ul.show-menu{  
+        height: 290px;
+    }
+    #scroll-to-top {
+        bottom: 30px;
+        right: 16px;
+        display: none;
+        cursor: pointer;
+    }
+    
+    #scroll-to-top svg {
+        width: 26px; 
+        height: 26px; 
+        transition: opacity 0.3s;
+    }
+    .main{
+        width: 100%;
+        flex-flow: row wrap;
+
+    }
+    .main-div{
+        width: 95%;
+        margin: 12em auto 0em auto;
+    }
+    .main-div-2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main-div-2 img{
+        width: 420px;
+        height: 390px
+    }
+    .div-under-div-1{
+        flex-direction: row;
+        width: 20vw;
+    }
+    .about-us .main{
+        width: 100%;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    .about-us-1,.about-us-2{
+        flex-basis: 46%;
+    }
+    .about-us-2{
+        margin-top: 0px;
+    }
+    .about-us-1 p, .about-us-2 p{
+        padding: 8px;
+    }
+    .about-us-1::after{
+        display: none;
+    }
+    .skill, .about-us, .projects{
+        width: 95vw;
+
+    }
+    .projects-section{
+        justify-content: center;
+    }
+    .skill-section{
+        flex-basis: 40%;
+    }
+    .skill-3{
+        margin-top: 2em;
+    }
+    .skill-1::after,.skill-2::after{
+        display: none;
+    }
+    div.other-skill-section{
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+    div.other-skill-section h4, div.skill-1 h4{
+        margin-bottom: 20px;
+    }
+    footer{
+        justify-content: center;
+    }
+    footer div{
+        flex-basis: 33%;
+    }
 }
