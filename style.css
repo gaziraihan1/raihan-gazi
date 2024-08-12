@@ -131,6 +131,7 @@ body{
     right: 20px;
     display: none;
     cursor: pointer;
+    z-index: 1;
 }
 
 #scroll-to-top svg {
@@ -161,7 +162,8 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    align-items: center;
+    height: 60px;
 }
 header svg{
     display: none;
@@ -176,6 +178,11 @@ nav div p{
     letter-spacing: 4px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+nav div:nth-child(2){
+    display: flex;
+    align-items: center;
+    margin-left: -2em;
 }
 nav ul {
     display: flex;
@@ -625,7 +632,7 @@ footer div:last-child p{
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     /* div{
         width:100%;
     } */
@@ -638,23 +645,24 @@ footer div:last-child p{
         
     }
     body{
-        width: 95vw;
         margin: 0 auto;
     }
     header{
+        width: 100%;
         height: 60px;
         overflow: visible;
         position: relative;
     }
     header svg{
         display: block;
-        margin-top: 10px;
+        margin-right: 10px;
         cursor: pointer;
     }
     nav{
         width: 100%;
-        
+        background:var(--background-main);
     }
+    
     nav div label{
         width: 40px;
         height: 16px;
@@ -675,7 +683,6 @@ footer div:last-child p{
         background: #1b1a1a;
     }
     nav div p{
-        padding-top: 14px;
         font-size: 18px;
     }
     nav ul li a{
@@ -686,6 +693,7 @@ footer div:last-child p{
         display: block;
         margin-right: 0px;
     }
+    
     nav ul.show-menu{
         display: flex;
         flex-direction: column;
@@ -709,8 +717,6 @@ footer div:last-child p{
     
     nav ul li{
         padding: 12px;
-        display: block;
-        width: 100%;
         transition: background 0.3s;
     }
     nav ul li:hover{
@@ -859,6 +865,10 @@ footer div:last-child p{
         flex-basis: 100%;
         padding: 10px; 
     }
+    .projects-section div p {
+        position: none;
+        text-align: center;
+      }
     .projects-section div h4, .projects-section div p, .projects-section div a {
         position: static; 
         transform: none;
@@ -866,7 +876,7 @@ footer div:last-child p{
         opacity: 1;
     }
     footer{
-        width: 95vw;
+        width: 100vw;
         flex-direction: column;
         text-align: center;
         justify-content: space-between;
@@ -881,12 +891,218 @@ footer div:last-child p{
         font-size: 13px;
     }
     footer div:last-child p{
-        font-size: 14px;
+        font-size: 12px;
     }
     
 }
-@media (min-width: 601px) and (max-width: 780px) {
+@media (min-width: 641px) and (max-width: 800px) {
     body{
         width: 100vw;
     }
+    header{
+        width: 100%;
+        height: 60px;
+        overflow: visible;
+        position: relative;
+    }
+    header svg{
+        display: block;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+    nav{
+        width: 100%;
+        background: var(--background-main);
+        
+    }
+    nav div p{
+        font-size: 22px;
+    }
+    nav ul.show-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        position: absolute;
+        height: auto;
+        top: 60px;
+        left: 0;
+        background:var(--background-main);
+        z-index: 1;
+    }
+    nav ul{
+        display: none;
+    }
+     nav ul {
+        display: none;
+        transition: all 0.3s ease-in-out;
+    }
+    nav ul li{
+        padding: 14px;
+        transition: background 0.3s;
+    }
+    nav ul li:hover{
+        background: var(--background-color);
+    }
+    
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        margin: 0 auto;
+    }
+    .main-div{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95vw;
+        margin: 0 auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background: none;
+        padding: 10px;
+        gap: 2em;
+        /* margin-left:auto;
+        margin-right: auto; */
+    }
+    .div-under-div-1{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        width: 22vw;
+    }
+    .div-under-div-1 a{
+        text-align: center;
+    }
+    .main-div-1{
+        flex-basis: 100%;
+        width: 100%;
+        background: var(--background-main);
+        padding: 30px;
+        border-radius: 4px;
+        margin: 0 0px;
+    }
+    
+    .main-div-1 p{
+        width: 100%;
+    }
+    .main-div-2{
+        height: 90%;
+        width: 90%;
+        border-radius: 50%;
+        flex-basis: 100%;
+        margin: 0 auto;
+    }
+    .main-div-2 img{
+        width: 100%;
+        height: auto;
+        border-radius: 0px 0px 200px 200px;
+        margin: 0 auto;
+        align-self: center;
+    }
+    .main-div, .about-us, .skill, .projects{
+        width: 95vw;
+        margin: 6em auto;  
+    }
+    
+    .about-us .main, .skill .main{
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background:none;
+    }
+    .about-us-1, .about-us-2{
+        flex-basis: 100%;
+        width: 90vw;
+        background: var(--background-main);
+        border-radius: 4px;
+    }
+    .about-us h2{
+        margin-top:6px;
+    }
+    .about-us-1 p, .about-us-2 p{
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .about-us-2{
+        margin-top: 4em;
+    }
+    .about-us h2, .skill h2{
+        
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .about-us-1::after{
+        display: none;
+    }
+    .skill-section{
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .skill-1, .skill-2, .skill-3{
+        width: 90vw;
+        background: var(--background-main);
+        padding: 30px;
+        margin: 6px 0px;
+        border-radius: 4px;
+    }
+    .skill-1 p{
+        margin-left: -60px;
+    }
+    .skill-1::after, .skill-2::after{
+        display: none;
+    }
+    .skill-section p{
+        width: 78vw;
+        margin: 0px 0px;
+    }
+    .other-skill-section{
+        margin-top: 22px;
+    }
+    .projects-section img{
+        display: none;
+    }
+    .projects-section {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .project-1, .project-2, .project-3, .project-4, .project-5 {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 45%;
+        padding: 10px; 
+    }
+    .projects-section div p {
+        position: none;
+        text-align: center;
+      }
+    .projects-section div h4, .projects-section div p, .projects-section div a {
+        position: static; 
+        transform: none;
+        margin: 0.5em 0; 
+        opacity: 1;
+    }
+    footer{
+        width: 100vw;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .footer-copyright a{
+        font-size: 18px;
+    }
+    footer div{
+        margin-top: 2em;
+    }
+    .footer-links a, footer div:last-child a{
+        font-size: 15px;
+    }
+    footer div:last-child p{
+        font-size: 14px;
+    }
+
 }
