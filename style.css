@@ -1,7 +1,6 @@
 :root{
     --heading1-tag: rgb(175, 141, 76);
     --button-tag-bg: green;
-    --button-tag-color: rgb(206, 203, 203);
 }
 body.light-mode {
     --background-color: rgb(250, 249, 249);
@@ -16,13 +15,15 @@ body.light-mode {
     --responsive-about: rgb(212, 211, 211);
     --skill-text: rgb(27, 27, 27);
     --heading-2-tag: rgb(49, 46, 46);
+    --button-tag-color: rgb(252, 240, 240);
+    --button-hover: rgb(77, 114, 77);
 }
 
 body.dark-mode {
     --background-color: rgb(43,42,42);
     --background-main: rgb(54, 53, 53);
     --paragraph-tag: rgb(200, 200, 200);
-    --button-tag-bg: rgb(177, 166, 235);
+    --button-tag-bg: rgb(169, 156, 238);
     --button-tag-color: black;
     --footer-background: rgb(34, 34, 34);
     --footer-color: rgb(221, 215, 205);
@@ -30,6 +31,8 @@ body.dark-mode {
     --responsive-about:rgb(51, 51, 51);
     --skill-text: rgb(255, 255, 255);
     --heading-2-tag: rgb(228, 222, 222);
+    --button-tag-color: rgb(233, 233, 233);
+    --button-hover: rgb(105, 160, 105);
 }
 /* Some css that will apply for all same element for reduce code*/
 h1{
@@ -294,6 +297,11 @@ nav div input:checked + label::after{
     border: none;
     border-radius: 50px;
     color:var(--button-tag-color);
+    transition: all 0.3s;
+}
+.div-under-div-1 a:hover{
+    background-color: var(--background-color);
+    color: var(--button-hover);
 }
 
 .main-div-2{
