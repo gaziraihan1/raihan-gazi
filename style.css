@@ -633,7 +633,7 @@ footer div:last-child p{
 }
 
 
-@media (max-width: 920px) {
+@media (max-width: 962px) {
     body{
         width: 100vw;
     }
@@ -754,7 +754,7 @@ footer div:last-child p{
     
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     
     p{
         padding-top: 12px;
@@ -918,7 +918,7 @@ footer div:last-child p{
     }
     
 }
-@media (min-width: 641px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 768px) {
     body{
         width: 100vw;
     }
@@ -1058,7 +1058,7 @@ footer div:last-child p{
     }
 
 }
-@media (min-width:800px) and (max-width: 920px) {
+@media (min-width:769px) and (max-width: 1050px) {
     nav ul li{
         width: 100%;
         padding: 16px;
@@ -1100,7 +1100,7 @@ footer div:last-child p{
     }
     .div-under-div-1{
         flex-direction: row;
-        width: 20vw;
+        width: 22vw;
     }
     .about-us .main{
         width: 100%;
@@ -1150,5 +1150,75 @@ footer div:last-child p{
     }
     footer div{
         flex-basis: 33%;
+    }
+}
+@media (min-width: 923px) and (max-width: 1050px) {
+    
+    #scroll-to-top {
+        bottom: 36px;
+        right: 18px;
+        display: none;
+        cursor: pointer;
+    }
+    
+    #scroll-to-top svg {
+        width: 28px; 
+        height: 28px; 
+        transition: opacity 0.3s;
+    }
+    
+    .main-div{
+        width: 95%;
+        margin: 12em auto 0em auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .main-div-1{
+        flex-basis: 60%;
+    }
+    .main-div-2{
+        flex-basis: 30%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main-div-2 img{
+        width: 420px;
+        height: 390px
+    }
+    .div-under-div-1{
+        flex-direction: row;
+        width: 18vw;
+    }
+    
+}
+@media (min-width: 1051px) and (max-width: 1290px) {
+    .div-under-div-1{
+        flex-direction: row;
+        width: 15vw;
+    }
+    .main-div{
+        width: 95%;
+        margin: 12em auto 0em auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .main-div-1{
+        flex-basis: 50%;
+    }
+    .main-div-2{
+        flex-basis: 30%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main-div-2 img{
+        width: 420px;
+        height: 390px;
+        margin-left: 0px;
     }
 }
