@@ -17,6 +17,7 @@ body.light-mode {
     --heading-2-tag: rgb(49, 46, 46);
     --button-tag-color: rgb(252, 240, 240);
     --button-hover: rgb(77, 114, 77);
+    --background-image: linear-gradient(to right, rgb(137, 158, 137), rgb(180, 163, 163), rgb(165, 165, 182));
 }
 
 body.dark-mode {
@@ -33,6 +34,7 @@ body.dark-mode {
     --heading-2-tag: rgb(228, 222, 222);
     --button-tag-color: rgb(233, 233, 233);
     --button-hover: rgb(105, 160, 105);
+    --background-image: linear-gradient(to left, rgb(38, 49, 38), rgb(53, 46, 46), rgb(32, 32, 43));
 }
 /* Some css that will apply for all same element for reduce code*/
 h1{
@@ -300,16 +302,18 @@ nav div input:checked + label::after{
     transition: all 0.3s;
 }
 .div-under-div-1 a:hover{
-    background-color: var(--background-color);
+    background-image: var(--background-image);
     color: var(--button-hover);
 }
 
 .main-div-2{
     height: 100%;
     width: 45vw;
-    border-radius: 50%;
     flex-basis: 40%;
+    background-image: var(--background-image);
+    border-radius: 10px;
 }
+
 .main-div-2 img{
     height: 400px;
     width: 300px;
@@ -645,6 +649,7 @@ footer div:last-child p{
     body{
         width: 100vw;
     }
+    
     header{
         width: 100%;
         height: 60px;
@@ -691,14 +696,14 @@ footer div:last-child p{
    
     #scroll-to-top {
         bottom: 20px;
-        right: 8px;
+        right: 14px;
         display: none;
         cursor: pointer;
     }
     
     #scroll-to-top svg {
-        width: 22px; 
-        height: 22px; 
+        width: 28px; 
+        height: 28px; 
         transition: opacity 0.3s;
     }
     .main-div{
@@ -738,7 +743,7 @@ footer div:last-child p{
     .main-div-2{
         height: 100%;
         width: 100%;
-        border-radius: 50%;
+        border-radius: 10px;
         flex-basis: 100%;
         margin: 0 auto;
     }
@@ -770,7 +775,7 @@ footer div:last-child p{
         word-spacing: 0px;
         font-size: 14px;
         line-height: 20px;
-        
+        letter-spacing: normal;
     }   
     nav div label{
         width: 40px;
