@@ -17,7 +17,7 @@ body.light-mode {
     --heading-2-tag: rgb(49, 46, 46);
     --button-tag-color: rgb(252, 240, 240);
     --button-hover: rgb(77, 114, 77);
-    --background-image: linear-gradient(to right, rgb(137, 158, 137), rgb(180, 163, 163), rgb(165, 165, 182));
+    --background-image: linear-gradient(to top right, rgb(156, 170, 156), rgb(165, 150, 150), rgb(173, 173, 197));
 }
 
 body.dark-mode {
@@ -34,7 +34,7 @@ body.dark-mode {
     --heading-2-tag: rgb(228, 222, 222);
     --button-tag-color: rgb(233, 233, 233);
     --button-hover: rgb(105, 160, 105);
-    --background-image: linear-gradient(to left, rgb(38, 49, 38), rgb(53, 46, 46), rgb(32, 32, 43));
+    --background-image: linear-gradient(to top left, rgb(27, 41, 27), rgb(65, 49, 49), rgb(51, 51, 59));
 }
 /* Some css that will apply for all same element for reduce code*/
 h1{
@@ -312,6 +312,8 @@ nav div input:checked + label::after{
     flex-basis: 40%;
     background-image: var(--background-image);
     border-radius: 10px;
+    position: relative;
+    transition: all 0.4s;
 }
 
 .main-div-2 img{
@@ -319,6 +321,15 @@ nav div input:checked + label::after{
     width: 300px;
     border-radius: 0px 0px 200px 200px;
     margin-left: 5em;
+}
+.main-div-2:hover + .design1{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(-130deg, wheat, tomato, green, yellow);
 }
 
 abbr{
@@ -626,12 +637,23 @@ footer a{
     text-align: center;
     border: none;
     border-radius: 5px;
+    outline: none;
+}
+input::placeholder{
+    text-align: left;
+    font-family: "Edu AU VIC WA NT Hand", monospace;
+    padding-left: 4px;
 }
 .footer-newsletter button{
     background: green;
     color: white;
     cursor: pointer;
     font-family: "Edu AU VIC WA NT Hand", monospace;
+    transition: all 0.4s;
+}
+.footer-newsletter button:hover{
+    background:var(--background-color);
+    color:var(--heading-2-tag);
 }
 footer div:last-child{
     flex-basis: 100%;
@@ -732,7 +754,7 @@ footer div:last-child p{
         flex-basis: 100%;
         width: 100%;
         background: var(--background-main);
-        padding: 30px;
+        padding: 10px;
         border-radius: 4px;
         margin: 0 0px;
     }
@@ -756,7 +778,7 @@ footer div:last-child p{
     }
     .about-us-1 p, .about-us-2 p{
         width: 100%;
-        padding: 20px 30px;
+        padding: 20px 10px;
     }
     .about-us-2{
         margin-top: 4em;
@@ -826,6 +848,7 @@ footer div:last-child p{
         flex-direction: column;
         width: 90vw;
         margin: 0 auto;
+        padding: 10px;
     }
     .main-div{
         width: 90vw;
@@ -873,7 +896,7 @@ footer div:last-child p{
     .skill-1, .skill-2, .skill-3{
         width: 85vw;
         background: var(--background-main);
-        padding: 30px;
+        padding: 10px;
         margin: 6px 0px;
         border-radius: 4px;
     }
@@ -965,7 +988,7 @@ footer div:last-child p{
     }
     
     .main-div-2{
-        height: 90%;
+        height: 100%;
         width: 90%;
         display: flex;
         justify-content: center;
