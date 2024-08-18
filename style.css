@@ -719,6 +719,7 @@ footer div:last-child p{
         z-index: 1;
         width: 100%;
         height: 200px;
+        z-index: 4;
     }
     
      nav ul {
@@ -877,7 +878,9 @@ footer div:last-child p{
         width: 25vw
     }
     
-    
+    .main-div-2{
+        width: 100%;
+    }
     .main-div, .about-us, .skill, .projects{
         width: 90vw;
         margin: 6em auto;  
