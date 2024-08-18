@@ -17,7 +17,7 @@ body.light-mode {
     --heading-2-tag: rgb(49, 46, 46);
     --button-tag-color: rgb(252, 240, 240);
     --button-hover: rgb(77, 114, 77);
-    --background-image: linear-gradient(to top right, rgb(156, 170, 156), rgb(165, 150, 150), rgb(173, 173, 197));
+    --background-image: linear-gradient(to top right, rgb(201, 218, 201), rgb(199, 184, 184), rgb(212, 212, 226));
 }
 
 body.dark-mode {
@@ -315,14 +315,33 @@ nav div input:checked + label::after{
     position: relative;
     transition: all 0.4s;
 }
-
+.main-div-2::after, .main-div-2::before{
+    width: 50%;
+    height: 55%;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top left, rgb(115, 175, 115), rgb(136, 96, 96), rgb(161, 161, 187));
+    z-index: 0;
+}
+.main-div-2::after{
+    top: 0;
+    right: 0;
+}
+.main-div-2::before{
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, rgb(115, 175, 115), rgb(136, 96, 96), rgb(161, 161, 187));
+}
 .main-div-2 img{
     height: 400px;
     width: 300px;
     border-radius: 0px 0px 200px 200px;
     margin-left: 5em;
+    z-index: 2;
+    position: relative;
 }
-.main-div-2:hover + .design1{
+.main-div-2:hover ~ .design1{
     position: absolute;
     left: 20px;
     top: 30px;
@@ -764,18 +783,18 @@ footer div:last-child p{
     }
     .main-div-2{
         height: 100%;
-        width: 100%;
+        width: 50%;
         border-radius: 10px;
         flex-basis: 100%;
-        margin: 0 auto;
+        /* margin: 0 auto; */
     }
-    .main-div-2 img{
+    /* .main-div-2 img{
         width: 100%;
         height: auto;
         border-radius: 0px 0px 200px 200px;
         margin: 0 auto;
         align-self: center;
-    }
+    } */
     .about-us-1 p, .about-us-2 p{
         width: 100%;
         padding: 20px 10px;
@@ -989,7 +1008,7 @@ footer div:last-child p{
     
     .main-div-2{
         height: 100%;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
     }
@@ -1056,6 +1075,7 @@ footer div:last-child p{
         flex-direction: row;
         width: 100%;
         flex-wrap: wrap;
+        padding: 16px;
     }
 
     .project-1, .project-2, .project-3, .project-4, .project-5 {
@@ -1063,6 +1083,7 @@ footer div:last-child p{
         flex-direction: column;
         flex-basis: 45%;
         padding: 10px; 
+        margin: 6px;
     }
     .projects-section div p {
         position: none;
@@ -1161,6 +1182,25 @@ footer div:last-child p{
     }
     .projects-section{
         justify-content: center;
+        padding: 16px;
+    }
+    .project-1, .project-2, .project-3, .project-4, .project-5{
+        width: min(600px, 60%);
+    }
+    .projects-section div p{
+        top: 11%;
+        padding-top: 2px;
+        padding-right: 4px;
+        letter-spacing: normal;
+    }
+    .projects-section div:hover h4 {
+        top: 7%;
+        font-size: 16px;
+        width: 100%;
+    }
+    .projects-section div a{
+        top: 85%;
+        border-radius: 6px;
     }
     .skill-section{
         flex-basis: 40%;
@@ -1211,18 +1251,17 @@ footer div:last-child p{
         flex-wrap: nowrap;
     }
     .main-div-1{
-        flex-basis: 60%;
+        flex-basis: 55%;
     }
     .main-div-2{
         flex-basis: 30%;
-        width: 50%;
+        width: 40%;
         height: 100%;
         display: flex;
         justify-content: center;
     }
     .main-div-2 img{
-        width: 420px;
-        height: 390px
+        margin-left: 0px;
     }
     .div-under-div-1{
         flex-direction: row;
@@ -1246,15 +1285,14 @@ footer div:last-child p{
         flex-basis: 50%;
     }
     .main-div-2{
-        flex-basis: 30%;
+        flex-basis: 40%;
         width: 50%;
         height: 100%;
         display: flex;
         justify-content: center;
     }
     .main-div-2 img{
-        width: 420px;
-        height: 390px;
+        width: 100%;
         margin-left: 0px;
     }
 }
