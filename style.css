@@ -880,6 +880,13 @@ footer div:last-child p{
     
     .main-div-2{
         width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main-div-2 img{
+        width: clamp(290px, 100%, 400px);
+        height: clamp(290px, auto, 440px);
+        margin: 0px;
     }
     .main-div, .about-us, .skill, .projects{
         width: 90vw;
@@ -1018,6 +1025,7 @@ footer div:last-child p{
     .main-div-2 img{
         width: 350px;
         height: 360px;
+        margin: 0px;
     }
    
     .main-div, .about-us, .skill, .projects{
@@ -1156,7 +1164,8 @@ footer div:last-child p{
     }
     .main-div-2 img{
         width: 420px;
-        height: 390px
+        height: 390px;
+        margin: 0px;
     }
     .div-under-div-1{
         flex-direction: row;
